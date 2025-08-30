@@ -52,8 +52,9 @@
   --topbar-bg-color: #000000;
   --heroSection-bg-color: #F2F0F1;
   --secondary-background: #000000;
+  --primary-background: #F0F0F0;
   --radius: 0.625rem;
-  --background: oklch(0.693 0 0);
+  --background: #FFFFFF;
   --foreground: oklch(0.147 0.004 49.25);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.147 0.004 49.25);

@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-SHIRT WITH TAPE DETAILS",
+      "price": 120,
+      "image": "/images/products/p1.png",
+      "tags": ["new-arrivals"],
+      "category": "electronics",
+      "displayLocations": ["home", "deals"],
+      "priority": 1
+    },
+    {
+      "id": 2,
+      "name": "SKINNY FIT JEANS",
+      "price": 49.99,
+      "image": "/images/products/p2.png",
+      "tags": ["new-arrivals"],
+      "category": "clothing",
+      "displayLocations": ["home"],
+      "priority": 2
+    },
+    {
+      "id": 3,
+      "name": "CHECKERED SHIRT",
+      "price": 19.99,
+      "image": "/images/products/p3.png",
+      "tags": ["new-arrivals"],
+      "category": "accessories",
+      "displayLocations": ["home", "deals"],
+      "priority": 3
+    },
+    {
+      "id": 4,
+      "name": "SLEEVE STRIPED T-SHIRT",
+      "price": 99.99,
+      "image": "/images/products/p4.png",
+      "tags": ["new-arrivals"],
+      "category": "home-appliances",
+      "displayLocations": ["home", "deals"],
+      "priority": 4
+    },
+    {
+      "id": 44,
+      "name": "SLEEVE STRIPED T-SHIRT",
+      "price": 99.99,
+      "image": "/images/products/p4.png",
+      "tags": ["new-arrivals"],
+      "category": "home-appliances",
+      "displayLocations": ["home", "deals"],
+      "priority": 4
+    },
+    {
+      "id": 5,
+      "name": "VERTICAL STRIPED SHIRT",
+      "price": 59.99,
+      "image": "/images/products/p5.png",
+      "tags": ["top-selling"],
+      "category": "fitness",
+      "displayLocations": ["home"],
+      "priority": 5
+    }   ,
+    {
+      "id": 6,
+      "name": "VERTICAL STRIPED SHIRT",
+      "price": 59.99,
+      "image": "/images/products/p6.png",
+      "tags": ["top-selling"],
+      "category": "fitness",
+      "displayLocations": ["home"],
+      "priority": 5
+    }   ,
+    {
+      "id": 7,
+      "name": "VERTICAL STRIPED SHIRT",
+      "price": 59.99,
+      "image": "/images/products/p7.png",
+      "tags": ["top-selling"],
+      "category": "fitness",
+      "displayLocations": ["home"],
+      "priority": 5
+    },
+    {
+      "id": 8,
+      "name": "VERTICAL STRIPED SHIRT",
+      "price": 59.99,
+      "image": "/images/products/p8.png",
+      "tags": ["top-selling"],
+      "category": "fitness",
+      "displayLocations": ["home"],
+      "priority": 5
+    }   
+  ]
+}
