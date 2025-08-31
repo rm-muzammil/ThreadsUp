@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import RatingStars from "../RatingStars";
+import { reviews } from "@/data/reviews";
 
 function ReviewSection() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -30,7 +32,7 @@ function ReviewSection() {
   const scrollNext = () => api && api.scrollNext();
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Container>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[3rem] font-extrabold">OUR HAPPY CUSTOMERS</h2>
@@ -62,38 +64,35 @@ function ReviewSection() {
             loop: true,
           }}
           setApi={setApi}
-          className="w-full max-w-6xl"
+          className="w-full "
         >
           <CarouselContent>
-            {Array.from({ length: 7 }).map((_, index) => {
-              const diff = Math.abs(selectedIndex - index);
-
-              let scaleClass = "scale-90 opacity-60 blur-sm"; // default
-              if (diff === 0)
-                scaleClass = "scale-110 opacity-100 blur-0"; // center
-              else if (diff === 1)
-                scaleClass = "scale-100 opacity-90 blur-0"; // near center
-              else if (diff === 2) scaleClass = "scale-95 opacity-80 blur-sm"; // edge
-
-              return (
-                <CarouselItem
-                  key={index}
-                  className="basis-1/5 transition-all duration-300"
+            {reviews.map((review, index) => (
+              <CarouselItem
+                key={review.id}
+                className="basis-[30%] transition-all duration-300"
+              >
+                <div
+                  className={`p-3 transform transition-all min-h-[15rem] duration-300 ${
+                    index === selectedIndex ||
+                    index === selectedIndex - 1 ||
+                    index === selectedIndex + 1
+                      ? "scale-100 blur-0 z-10"
+                      : "scale-100 blur-[2px] opacity-80"
+                  }`}
                 >
-                  <div
-                    className={`p-2 transform transition-all duration-300 ${scaleClass}`}
-                  >
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-3xl font-semibold">
-                          {index + 1}
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              );
-            })}
+                  <Card>
+                    <CardContent className="flex flex-col items-start min-h-[15rem] justify-center p-6 text-center">
+                      <div className="my-2">{RatingStars(review.rating)}</div>
+                      <p className="text-[1.25rem] font-bold">{review.name}</p>
+                      <p className="text-sm text-left opacity-[60%] text-gray-600">
+                        {review.review}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
           </CarouselContent>
         </Carousel>
       </div>

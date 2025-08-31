@@ -48,11 +48,16 @@
 }
 
 :root {
+  --primary-text-color: #000000;
+  --secondary-text-color: #FFFFFF;
   --topbar-text-color: #FFFFFF;
   --topbar-bg-color: #000000;
   --heroSection-bg-color: #F2F0F1;
   --secondary-background: #000000;
   --primary-background: #F0F0F0;
+  --primary-hover: #00000049;
+  --secondary-hover: #ffffff7b;
+  --secondary-border: #ffffff;
   --radius: 0.625rem;
   --background: #FFFFFF;
   --foreground: oklch(0.147 0.004 49.25);

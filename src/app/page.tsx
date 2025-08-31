@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import BrandSection from "@/components/sections/BrandSection";
 import CategorySection from "@/components/sections/CategorySection";
@@ -17,6 +18,8 @@ export default function Home() {
       <MainSection />
       <CategorySection />
       <ReviewSection />
+      <CategorySection />
+      <Footer />
     </div>
   );
 }
