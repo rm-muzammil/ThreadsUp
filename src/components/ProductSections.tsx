@@ -62,12 +62,12 @@ export default function ProductSections({
   };
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 ">
       {tags.map((tag) => {
         const filteredProducts = products.filter((p) => p.tags.includes(tag));
         return (
-          <div key={tag} className="space-y-4">
-            <h2 className="flex justify-center text-[3rem] font-bold uppercase tracking-tighter">
+          <div key={tag} className="space-y-4 my-[4rem]">
+            <h2 className="flex justify-center text-[2rem] md:text-[3rem] font-bold uppercase tracking-tighter">
               {tag.replace("-", " ")}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

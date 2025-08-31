@@ -32,10 +32,12 @@ function ReviewSection() {
   const scrollNext = () => api && api.scrollNext();
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden mt-[4rem]">
       <Container>
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-[3rem] font-extrabold">OUR HAPPY CUSTOMERS</h2>
+          <h2 className="text-[2rem] md:text-[3rem] font-extrabold">
+            OUR HAPPY CUSTOMERS
+          </h2>
           <div className="flex gap-3">
             <Button
               variant="outline"
@@ -70,7 +72,7 @@ function ReviewSection() {
             {reviews.map((review, index) => (
               <CarouselItem
                 key={review.id}
-                className="basis-[30%] transition-all duration-300"
+                className="md:basis-[30%] transition-all duration-300"
               >
                 <div
                   className={`p-3 transform transition-all min-h-[15rem] duration-300 ${

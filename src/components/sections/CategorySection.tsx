@@ -32,8 +32,8 @@ function CategorySection() {
   return (
     <div className="mt-[5rem]">
       <Container>
-        <div className="bg-[var(--primary-background)] p-[4rem] rounded-2xl">
-          <h2 className="text-center w-full mb-[2rem] text-[3rem] font-bold tracking-tighter">
+        <div className="bg-[var(--primary-background)] p-5 md:p-[4rem] rounded-2xl">
+          <h2 className="text-center w-full md:mb-[2rem] text-[2rem] md:text-[3rem] font-bold tracking-tight md:tracking-tighter">
             BROWSE BY DRESS STYLE
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
@@ -41,7 +41,7 @@ function CategorySection() {
               <div
                 key={section.id}
                 className={`flex justify-between relative h-[18rem] rounded-2xl overflow-hidden ${
-                  index === 1 || index === 2 ? "col-span-2" : ""
+                  index === 1 || index === 2 ? "md:col-span-2" : ""
                 }`}
               >
                 <h3 className="z-10 m-[2rem] text-black text-3xl font-bold">

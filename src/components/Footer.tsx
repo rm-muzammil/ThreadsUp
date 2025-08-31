@@ -11,8 +11,8 @@ function Footer() {
   return (
     <div className="h-[37rem] flex flex-col justify-between ">
       <Container>
-        <div className="flex justify-between items-center relative w-full px-[5rem] bottom-[-50%] rounded-2xl h-[11.25rem] bg-[var(--primary)]">
-          <p className="text-[2.5rem] text-[var(--secondary-text-color)] text-left max-w-[35rem] font-extrabold">
+        <div className="flex flex-col md:flex-row justify-between items-center relative w-full p-[1rem] md:p-[2rem] md:px-[5rem] bottom-[-50%] rounded-2xl h-[20rem] md:h-[11.25rem] bg-[var(--primary)]">
+          <p className="text-[2rem] md:text-[2.5rem] text-[var(--secondary-text-color)] text-left max-w-[35rem] font-extrabold">
             STAY UPTO DATE ABOUT OUR LATEST OFFERS
           </p>
           <div className="flex flex-col justify-between h-[6.7rem]">
@@ -21,15 +21,15 @@ function Footer() {
               placeholder="Enter your email address"
             />
             <Button className="bg-[var(--secondary)] text-[var(--primary-text-color)] h-[3rem] w-[21rem] rounded-4xl hover:bg-[var(--secondary-hover)] hover:text-[var(--secondary-text-color)]">
-              Subscribe
+              Subscribe to Newsletter
             </Button>
           </div>
         </div>
       </Container>
-      <div className="bottom-0 h-[31rem] bg-[var(--primary-background)]">
+      <div className="bottom-0 md:h-[31rem] bg-[var(--primary-background)]">
         <Container>
-          <div className="flex justify-between items-start mt-[10rem]">
-            <div className="flex flex-col gap-[1rem] max-w-[16rem]">
+          <div className="flex flex-col gap-[2rem] md:flex-row justify-between items-start mt-[10rem]">
+            <div className="flex flex-col gap-[1rem] md:max-w-[16rem]">
               <h3 className="text-[var(--primary-text-color)] text-[2rem] font-extrabold">
                 {siteConfig.name}
               </h3>
@@ -52,18 +52,18 @@ function Footer() {
                 ))}
               </div>
             </div>
-            <div className="flex gap-[6rem] min-w-[10rem]">
+            <div className="grid grid-cols-2 mt-[2rem] md:mt-[0rem] md:grid-cols-5 gap-[6rem] min-w-[10rem]">
               {footerData.links.map((linkCategory) => (
-                <div key={linkCategory.title}>
+                <div className="" key={linkCategory.title}>
                   <h4 className="text-[var(--primary-text-color)] text-[1rem] mb-[2rem] uppercase tracking-[0.3rem] font-semibold">
                     {linkCategory.title}
                   </h4>
-                  <ul className="flex flex-col gap-[1rem]">
+                  <ul className="flex flex-col gap-[0.5rem] md:gap-[1rem] md:min-w-[10rem]">
                     {linkCategory.items.map((item) => (
                       <li key={item.name}>
                         <a
                           href={item.url}
-                          className="text-[var(--primary-hover)] text-[1rem] hover:underline"
+                          className="text-[var(--primary-hover)] text-[0.8rem] md:text-[1rem] hover:underline"
                         >
                           {item.name}
                         </a>

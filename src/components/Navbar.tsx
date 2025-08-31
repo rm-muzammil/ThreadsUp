@@ -18,11 +18,11 @@ import Container from "./Container";
 function Navbar() {
   return (
     <Container>
-      <div className="md:flex justify-between items-center h-[3rem] md:my-[1.5rem]  ">
-        <div className="font-extrabold tracking-tighter text-[2rem]">
+      <div className="flex justify-between items-center h-[3rem] md:my-[1.5rem]  ">
+        <div className="font-extrabold tracking-tighter text-[1.5rem] md:text-[2rem] ">
           {brandData.name}
         </div>
-        <div>
+        <div className="hidden md:flex">
           <NavigationMenu>
             <NavigationMenuList>
               {/* Dropdown Item */}
@@ -65,7 +65,7 @@ function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div>
+        <div className="hidden md:flex">
           <SearchBox />
         </div>
         <div className="flex items-center gap-4">
