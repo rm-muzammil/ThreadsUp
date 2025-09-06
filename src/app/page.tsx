@@ -11,15 +11,12 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <Topbar />
-      <Navbar />
       <HeroSection />
       <BrandSection />
       <MainSection />
       <CategorySection />
       <ReviewSection />
       <CategorySection />
-      <Footer />
     </div>
   );
 }
