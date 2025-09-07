@@ -1,6 +1,7 @@
 "use client";
 import Container from "@/components/Container";
 import ProductRelatedDetail from "@/components/ProductRelatedDetail";
+import ProductSections from "@/components/ProductSections";
 import ProductDetailSection from "@/components/sections/productDetail/ProductDetailSection";
 
 import { useParams } from "next/navigation";
@@ -29,6 +30,7 @@ function Page() {
     <Container>
       <ProductDetailSection />
       <ProductRelatedDetail />
+      <ProductSections />
     </Container>
   );
 }

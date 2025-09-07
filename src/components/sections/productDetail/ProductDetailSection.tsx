@@ -3,13 +3,14 @@
 import { useState } from "react";
 import {
   Box,
-  Button,
+  // Button,
   Typography,
   ToggleButton,
   ToggleButtonGroup,
 } from "@mui/material";
 import Image from "next/image";
 import RatingStars from "@/components/RatingStars";
+import { Button } from "@/components/ui/button";
 
 interface Product {
   id: number;
@@ -40,7 +41,7 @@ export default function ProductDetailSection() {
   const [selectedQuantity, setSelectedQuantity] = useState(1);
 
   return (
-    <div className="flex justify-between">
+    <div className="md:flex justify-between">
       <div className="flex gap-4">
         <div className="flex flex-col justify-between ">
           <Image
@@ -120,8 +121,8 @@ export default function ProductDetailSection() {
             </ToggleButton>
           ))}
         </ToggleButtonGroup>
-        <div className="mt-6 flex justify-between">
-          <div className="mt-4 flex items-center gap-4">
+        <div className="mt-20 flex items-center justify-between">
+          <div className="flex gap-4">
             <button
               onClick={() =>
                 setSelectedQuantity((prev) => Math.max(prev - 1, 1))
@@ -136,10 +137,8 @@ export default function ProductDetailSection() {
           </div>
 
           <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            sx={{ mt: 4 }}
+            className="w-[25rem] rounded-4xl cursor-pointer bg-[var(--secondary-background)]"
+            // color="primary"
           >
             Add to Cart
           </Button>
