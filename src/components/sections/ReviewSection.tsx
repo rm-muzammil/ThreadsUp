@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import RatingStars from "../RatingStars";
 import { reviews } from "@/data/reviews";
+import ReviewCard from "../ReviewCard";
 
 function ReviewSection() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -83,15 +84,7 @@ function ReviewSection() {
                       : "scale-100 blur-[2px] opacity-80"
                   }`}
                 >
-                  <Card>
-                    <CardContent className="flex flex-col items-start min-h-[15rem] justify-center p-6 text-center">
-                      <div className="my-2">{RatingStars(review.rating)}</div>
-                      <p className="text-[1.25rem] font-bold">{review.name}</p>
-                      <p className="text-sm text-left opacity-[60%] text-gray-600">
-                        {review.review}
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <ReviewCard review={review} />
                 </div>
               </CarouselItem>
             ))}
